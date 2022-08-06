@@ -1,10 +1,2 @@
 User-agent: *
-Disallow: /administrator/
-
-User-agent: *
-Allow: /
-Sitemap: https://swiatrolnika.info/sitemap.xml
-
-User-agent: Googlebot-news
-Allow: /
-Sitemap: https://swiatrolnika.info/newssitemap.xml
+Disallow:

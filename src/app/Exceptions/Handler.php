@@ -4,14 +4,13 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
-use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
 class Handler extends ExceptionHandler
 {
     /**
      * A list of the exception types that are not reported.
      *
-     * @var string[]
+     * @var array<int, class-string<Throwable>>
      */
     protected $dontReport = [
         //
@@ -20,7 +19,7 @@ class Handler extends ExceptionHandler
     /**
      * A list of the inputs that are never flashed for validation exceptions.
      *
-     * @var string[]
+     * @var array<int, string>
      */
     protected $dontFlash = [
         'current_password',
@@ -39,20 +38,4 @@ class Handler extends ExceptionHandler
             //
         });
     }
-    public function render($request, Throwable $exception)
-    {
-        if ($exception instanceof HttpExceptionInterface) {
-            if (env('APP_ENV') === 'production' && $exception->getStatusCode() == 404) {
-                return response()->view('errors.404', [], 404);
-            }
-            if (env('APP_ENV') === 'production' && $exception->getStatusCode() == 500) {
-                return response()->view('errors.500', [], 500);
-            }
-        }
-        return parent::render($request, $exception);
-    }
-    // protected function renderHttpException(HttpException $e)
-    // {
-
-    // }
 }

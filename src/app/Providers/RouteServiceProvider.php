@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
-
     /**
      * The path to the "home" route for your application.
      *
@@ -18,9 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const ADMIN = '/administrator/kokpit';
-    public const HOME = '/';
-    protected $namespace = 'App\Http\Controllers';
+    public const HOME = '/home';
 
     /**
      * The controller namespace for the application.
