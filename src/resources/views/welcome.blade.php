@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="WPROST.pl: Najnowsze wiadomości, najświeższe informacje, najciekawsze komentarze i opinie. Polska i świat, polityka, historia, biznes, kultura, Tygodnik Wprost oraz blogi">
 
         <title>Laravel</title>
 
